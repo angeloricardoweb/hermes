@@ -1,0 +1,14 @@
+{
+  // Place your api-temp workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+
+  "Template Next Route": {
+    "scope": "javascript,typescript",
+    "prefix": "#template",
+    "body": "import NextCors from 'nextjs-cors';\nimport { v4 as uuidv4 } from 'uuid';\n\n export default async function handler(req, res) {\n  await NextCors(req, res, {\n // Options methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],\n  origin: '*',\n  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204\n  });\n\n const data = {\n error: false,\n message: 'Sem erros',\n results: {\n message: 'Hello World',\n },\n };\n\n res.status(200).json(data);\n }",
+    "description": "Log output to console"
+  }
+}
