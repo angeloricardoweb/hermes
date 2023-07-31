@@ -9,7 +9,7 @@ export default function Home() {
         fontSize: '5rem',
       }}
     >
-      Hermes
+      Hermes 1.0.0
     </div>
   );
 }
