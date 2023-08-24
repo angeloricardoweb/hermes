@@ -9,19 +9,19 @@ export default async function handler(req, res) {
   });
 
   if (!req.body.id) {
-    res.status(422).json({
+    return res.status(422).json({
       error: true,
       message: 'ID não informado',
     });
   }
 
   if (req.method === 'POST') {
-    res.status(200).json({
+    return res.status(200).json({
       error: false,
       message: req.body.id === 1 ? 'Favoritado' : 'Desfavoritado',
     });
   } else {
-    res.status(405).json({
+    return res.status(405).json({
       error: true,
       message: 'Método não suportado',
     });
