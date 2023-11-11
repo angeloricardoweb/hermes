@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
   if (req.method === 'POST') {
     try {
-      if (req.body.password == '123456' && req.body.email == 'hermes') {
+      if (req.body.password == '123456' && req.body.email == 'teste@email.com') {
         return res.status(200).json({
           error: false,
           message: 'Sem erros',
