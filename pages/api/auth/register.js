@@ -14,6 +14,7 @@ export default async function handler(req, res) {
       message: 'Cadastro realizado com sucesso',
       results: {
         token: uuidv4(),
+        role: "baby"
       },
     });
 
