@@ -16,6 +16,7 @@ export default async function handler(req, res) {
           message: 'Sem erros',
           results: {
             token: uuidv4(),
+            role: "baby"
           },
         });
       } else {
